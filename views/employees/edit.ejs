@@ -1,0 +1,17 @@
+<section class="card"> 
+
+  <h1>Edit Employee</h1> 
+
+  
+
+  <form action="/employees/<%= employee._id %>?_method=PUT" method="POST" class="form grid-form"> 
+
+    <%- include('_form', { employee }) %> 
+
+    <button type="submit" class="btn primary">Update Employee</button> 
+
+    <a href="/employees" class="btn">Cancel</a> 
+
+  </form> 
+
+</section> 

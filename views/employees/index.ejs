@@ -1,0 +1,87 @@
+<section class="page-header"> 
+
+  <div> 
+
+    <h1>Employees</h1> 
+
+    <p>Manage employee records using Create, Read, Update and Delete operations.</p> 
+
+  </div> 
+
+  <a href="/employees/create" class="btn primary">Add Employee</a> 
+
+</section> 
+
+  
+
+<section class="card"> 
+
+  <% if (employees.length === 0) { %> 
+
+    <p>No employees found. Add your first employee.</p> 
+
+  <% } else { %> 
+
+    <table> 
+
+      <thead> 
+
+        <tr> 
+
+          <th>Name</th> 
+
+          <th>Email</th> 
+
+          <th>Department</th> 
+
+          <th>Position</th> 
+
+          <th>Salary</th> 
+
+          <th>Actions</th> 
+
+        </tr> 
+
+      </thead> 
+
+      <tbody> 
+
+        <% employees.forEach(employee => { %> 
+
+          <tr> 
+
+            <td><%= employee.firstName %> <%= employee.lastName %></td> 
+
+            <td><%= employee.email %></td> 
+
+            <td><%= employee.department %></td> 
+
+            <td><%= employee.position %></td> 
+
+            <td>£<%= employee.salary.toLocaleString() %></td> 
+
+            <td class="actions"> 
+
+              <a href="/employees/<%= employee._id %>" class="btn small">View</a> 
+
+              <a href="/employees/<%= employee._id %>/edit" class="btn small warning">Edit</a> 
+
+              <form action="/employees/<%= employee._id %>?_method=DELETE" method="POST" class="inline-form"> 
+
+                <button type="submit" class="btn small danger" onclick="return confirm('Delete this employee?')">Delete</button> 
+
+              </form> 
+
+            </td> 
+
+          </tr> 
+
+        <% }) %> 
+
+      </tbody> 
+
+    </table> 
+
+  <% } %> 
+
+</section> 

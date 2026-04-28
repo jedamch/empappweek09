@@ -1,0 +1,33 @@
+<section class="card"> 
+
+  <h1><%= employee.firstName %> <%= employee.lastName %></h1> 
+
+  
+
+  <div class="details"> 
+
+    <p><strong>Email:</strong> <%= employee.email %></p> 
+
+    <p><strong>Phone:</strong> <%= employee.phone %></p> 
+
+    <p><strong>Department:</strong> <%= employee.department %></p> 
+
+    <p><strong>Position:</strong> <%= employee.position %></p> 
+
+    <p><strong>Salary:</strong> £<%= employee.salary.toLocaleString() %></p> 
+
+    <p><strong>Joining Date:</strong> <%= employee.joiningDate.toDateString() %></p> 
+
+  </div> 
+
+  
+
+  <div class="actions"> 
+
+    <a href="/employees/<%= employee._id %>/edit" class="btn warning">Edit</a> 
+
+    <a href="/employees" class="btn">Back</a> 
+
+  </div> 
+
+</section> 

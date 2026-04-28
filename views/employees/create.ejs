@@ -1,0 +1,17 @@
+<section class="card"> 
+
+  <h1>Add Employee</h1> 
+
+  
+
+  <form action="/employees" method="POST" class="form grid-form"> 
+
+    <%- include('_form', { employee: null }) %> 
+
+    <button type="submit" class="btn primary">Save Employee</button> 
+
+    <a href="/employees" class="btn">Cancel</a> 
+
+  </form> 
+
+</section> 

@@ -1,0 +1,55 @@
+<label>First Name</label> 
+
+<input type="text" name="firstName" value="<%= employee ? employee.firstName : '' %>" required> 
+
+  
+
+<label>Last Name</label> 
+
+<input type="text" name="lastName" value="<%= employee ? employee.lastName : '' %>" required> 
+
+  
+
+<label>Email</label> 
+
+<input type="email" name="email" value="<%= employee ? employee.email : '' %>" required> 
+
+  
+
+<label>Phone</label> 
+
+<input type="text" name="phone" value="<%= employee ? employee.phone : '' %>" required> 
+
+  
+
+<label>Department</label> 
+
+<input type="text" name="department" value="<%= employee ? employee.department : '' %>" required> 
+
+  
+
+<label>Position</label> 
+
+<input type="text" name="position" value="<%= employee ? employee.position : '' %>" required> 
+
+  
+
+<label>Salary</label> 
+
+<input type="number" name="salary" value="<%= employee ? employee.salary : '' %>" min="0" required> 
+
+  
+
+<label>Joining Date</label> 
+
+<input 
+
+  type="date" 
+
+  name="joiningDate" 
+
+  value="<%= employee ? employee.joiningDate.toISOString().substring(0, 10) : '' %>" 
+
+  required 
+
+> 
